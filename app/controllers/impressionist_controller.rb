@@ -46,6 +46,7 @@ module ImpressionistController
         :controller_name => controller_name,
         :action_name => action_name,
         :user_id => user_id,
+        :store_id => store_id,
         :request_hash => @impressionist_hash,
         :session_hash => session_hash,
         :ip_address => request.remote_ip,
@@ -96,6 +97,10 @@ module ImpressionistController
     end
 
     #use both @current_user and current_user helper
+    def store_id
+      store_id = @store.id
+      store_id
+    end
     def user_id
       user_id = @current_user ? @current_user.id : nil rescue nil
       user_id = current_user ? current_user.id : nil rescue nil if user_id.blank?
