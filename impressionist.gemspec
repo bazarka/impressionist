@@ -18,7 +18,7 @@ Gem::Specification.new do |s|
   s.require_path  = 'lib'
   s.required_rubygems_version = Gem::Requirement.new('>= 1.3.6') if s.respond_to? :required_rubygems_version=
 
-  s.add_dependency 'httpclient', '~> 2.2'
+  s.add_dependency 'httpclient', '> 2.2'
   s.add_dependency 'nokogiri', '~> 1.5'
 
   s.add_development_dependency 'bundler', '~> 1.0'
