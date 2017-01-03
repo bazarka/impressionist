@@ -4,6 +4,7 @@
 
 class Impression < ActiveRecord::Base
 
+  belongs_to :store
   include Impressionist::CounterCache
 
   # sets belongs_to and attr_accessible depending on Rails version
